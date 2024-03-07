@@ -1,5 +1,8 @@
 package com.tredence.assignment.exceptions;
 
+/**
+ * Throw ProductNotFoundException when product list is empty for any scenario.
+ */
 public class ProductNotFoundException extends NotFoundException {
 
     public ProductNotFoundException() {

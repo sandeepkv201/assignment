@@ -16,9 +16,8 @@ public class GlobalExceptionHandler {
         HttpStatus status;
 
         if (ex instanceof NotFoundException) {
+            // Setting 400 Http Status for exceptions of type NotFoundException.
             status = HttpStatus.NOT_FOUND;
-        } else if (ex instanceof RuntimeException) {
-            status = HttpStatus.BAD_REQUEST;
         } else {
             // Setting default status code to 500 for all other exceptions
             status = HttpStatus.INTERNAL_SERVER_ERROR;
