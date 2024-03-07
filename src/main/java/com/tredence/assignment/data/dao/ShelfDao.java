@@ -31,6 +31,11 @@ public class ShelfDao {
         this.entityManager = entityManager;
     }
 
+    /**
+     * Query to get max score category per shopper
+     * 
+     * @return
+     */
     public TypedQuery<Tuple> categoryWithMaxScorePerShopperQuery() {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Tuple> criteriaQuery = criteriaBuilder.createTupleQuery();

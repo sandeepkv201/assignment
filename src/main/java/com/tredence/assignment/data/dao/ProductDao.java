@@ -17,6 +17,7 @@ import jakarta.persistence.criteria.Root;
 
 @Repository
 public class ProductDao {
+
     private static final String BRAND = "brand";
     private static final String SHELFS = "shelfs";
     private static final String PRODUCT = "product";
@@ -30,6 +31,11 @@ public class ProductDao {
         this.entityManager = entityManager;
     }
 
+    /**
+     * Get unique associated product and shoppers query
+     * 
+     * @return
+     */
     public TypedQuery<Tuple> productsAndShoppersQuery() {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Tuple> criteriaQuery = criteriaBuilder.createTupleQuery();
@@ -41,6 +47,11 @@ public class ProductDao {
         return entityManager.createQuery(criteriaQuery);
     }
 
+    /**
+     * Brands without shoppers query.
+     * 
+     * @return
+     */
     public TypedQuery<String> brandsWithoutShoppersQuery() {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
         CriteriaQuery<String> criteriaQuery = criteriaBuilder.createQuery(String.class);
