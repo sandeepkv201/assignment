@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tredence.assignment.dto.outbound.ShopperCategoryWithMaxScoreDTO;
+import com.tredence.assignment.data.dto.outbound.ShopperCategoryWithMaxScoreDTO;
 import com.tredence.assignment.service.ProductService;
 
 @RestController

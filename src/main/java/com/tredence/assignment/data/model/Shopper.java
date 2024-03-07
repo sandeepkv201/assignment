@@ -1,4 +1,4 @@
-package com.tredence.assignment.repository.model;
+package com.tredence.assignment.data.model;
 
 import java.util.Set;
 

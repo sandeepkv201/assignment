@@ -1,4 +1,4 @@
-package com.tredence.assignment.repository.model;
+package com.tredence.assignment.data.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

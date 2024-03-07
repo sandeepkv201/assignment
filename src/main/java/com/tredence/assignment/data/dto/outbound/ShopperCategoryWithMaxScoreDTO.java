@@ -1,4 +1,4 @@
-package com.tredence.assignment.dto.outbound;
+package com.tredence.assignment.data.dto.outbound;
 
 public class ShopperCategoryWithMaxScoreDTO {
 

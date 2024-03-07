@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.tredence.assignment.dto.outbound.ShopperCategoryWithMaxScoreDTO;
-import com.tredence.assignment.repository.model.Product;
-import com.tredence.assignment.repository.model.Shelf;
+import com.tredence.assignment.data.dto.outbound.ShopperCategoryWithMaxScoreDTO;
+import com.tredence.assignment.data.model.Product;
+import com.tredence.assignment.data.model.Shelf;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Tuple;
@@ -26,19 +26,12 @@ import jakarta.persistence.criteria.Subquery;
 public class ProductService {
 
     private static final String CATEGORY = "category";
-
     private static final String BRAND = "brand";
-
     private static final String SHELFS = "shelfs";
-
     private static final String RELEVANCY_SCORE = "relevancyScore";
-
     private static final String PRODUCT = "product";
-
     private static final String SHOPPER_ID = "shopperId";
-
     private static final String SHOPPER = "shopper";
-
     private static final String PRODUCT_ID = "productId";
 
     private EntityManager entityManager;
