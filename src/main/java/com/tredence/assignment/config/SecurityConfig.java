@@ -17,11 +17,21 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
+    /**
+     * Standard BCrypt Password Hashing Encoder
+     * 
+     * @return
+     */
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * In memory user details service
+     * 
+     * @return
+     */
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails user = User.withUsername("user").password(passwordEncoder().encode("password")).roles("USER")
