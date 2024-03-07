@@ -13,7 +13,7 @@ import com.tredence.assignment.data.dto.outbound.ShopperCategoryWithMaxScoreDTO;
 import com.tredence.assignment.service.ProductService;
 
 @RestController
-@RequestMapping(path = "/internal")
+@RequestMapping(path = "/api")
 public class PrivateController {
 
     private ProductService productService;
