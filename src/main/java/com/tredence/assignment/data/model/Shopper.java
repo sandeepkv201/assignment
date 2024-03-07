@@ -1,5 +1,6 @@
 package com.tredence.assignment.data.model;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -10,7 +11,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Shopper {
+public class Shopper implements Serializable {
+
+    private static final long serialVersionUID = 2L;
 
     @Id
     private String shopperId;
