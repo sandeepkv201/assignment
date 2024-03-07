@@ -31,10 +31,10 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public List<ShopperCategoryWithMaxScoreDTO> getCategoryWithMaxScorePerShopper() {
-        return shelfDao.categoryWithMaxScorePerShopperQuery().getResultStream().map(tuple -> {
-            return new ShopperCategoryWithMaxScoreDTO(tuple.get(0).toString(),
-                    tuple.get(1).toString(), Double.valueOf(tuple.get(2).toString()));
-        }).collect(Collectors.toList());
+        return shelfDao.categoryWithMaxScorePerShopperQuery().getResultStream()
+                .map(tuple -> new ShopperCategoryWithMaxScoreDTO(tuple.get(0).toString(),
+                        tuple.get(1).toString(), Double.valueOf(tuple.get(2).toString())))
+                .collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
