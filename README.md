@@ -1,7 +1,7 @@
 # Assignment
 This is a Spring Boot Assignment Project
 
-External API's can be called directly and for Internal API's use below credentials: 
+External API's can be called directly and for Internal API's use below credentials with HttpBasic Authentication: 
 - Username: `user` 
 - Password: `password`
 
