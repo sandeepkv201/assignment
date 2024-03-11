@@ -1,5 +1,7 @@
 package com.tredence.assignment.data.dto.outbound;
 
+import java.util.Objects;
+
 public class ShopperCategoryWithMaxScoreDTO {
 
     private String shopperId;
@@ -36,4 +38,19 @@ public class ShopperCategoryWithMaxScoreDTO {
         this.relevancyScore = relevancyScore;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(shopperId, category, relevancyScore);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!(obj instanceof ShopperCategoryWithMaxScoreDTO))
+            return false;
+        ShopperCategoryWithMaxScoreDTO other = (ShopperCategoryWithMaxScoreDTO) obj;
+        return Objects.equals(shopperId, other.shopperId) && Objects.equals(category, other.category)
+                && Objects.equals(relevancyScore, other.relevancyScore);
+    }
 }

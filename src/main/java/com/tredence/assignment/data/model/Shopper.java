@@ -1,6 +1,7 @@
 package com.tredence.assignment.data.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
@@ -46,5 +47,20 @@ public class Shopper implements Serializable {
 
     public void setShelfs(Set<Shelf> shelfs) {
         this.shelfs = shelfs;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(shopperId);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!(obj instanceof Shopper))
+            return false;
+        Shopper other = (Shopper) obj;
+        return Objects.equals(shopperId, other.shopperId);
     }
 }

@@ -1,6 +1,7 @@
 package com.tredence.assignment.data.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -60,5 +61,20 @@ public class Shelf implements Serializable {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!(obj instanceof Shelf))
+            return false;
+        Shelf other = (Shelf) obj;
+        return Objects.equals(id, other.id);
     }
 }
